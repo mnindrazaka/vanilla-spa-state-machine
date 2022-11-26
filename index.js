@@ -21,6 +21,9 @@ function reducer(prevState, action) {
         case "FETCH": {
           return { ...prevState, tag: "loading" };
         }
+        case "NAVIGATE_PAGE": {
+          return { ...prevState, hash: action.payload.hash };
+        }
         default: {
           return prevState;
         }
@@ -52,6 +55,9 @@ function reducer(prevState, action) {
             products: [],
           };
         }
+        case "NAVIGATE_PAGE": {
+          return { ...prevState, hash: action.payload.hash };
+        }
         default: {
           return prevState;
         }
@@ -73,6 +79,9 @@ function reducer(prevState, action) {
         }
         case "FETCH": {
           return { ...prevState, tag: "loading" };
+        }
+        case "NAVIGATE_PAGE": {
+          return { ...prevState, hash: action.payload.hash };
         }
         default: {
           return prevState;
@@ -96,6 +105,9 @@ function reducer(prevState, action) {
         case "FETCH": {
           return { ...prevState, tag: "loading" };
         }
+        case "NAVIGATE_PAGE": {
+          return { ...prevState, hash: action.payload.hash };
+        }
         default: {
           return prevState;
         }
@@ -117,6 +129,9 @@ function reducer(prevState, action) {
         }
         case "FETCH": {
           return { ...prevState, tag: "loading" };
+        }
+        case "NAVIGATE_PAGE": {
+          return { ...prevState, hash: action.payload.hash };
         }
         default: {
           return prevState;
